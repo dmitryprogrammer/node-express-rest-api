@@ -4,7 +4,7 @@ const {PORT = 3000} = process.env;
 
 const app = express();
 
-if (!module.parent) {
+if (!require.main) {
   app
     .get("/", (req, res) => {
       res.send("Hello World!");
