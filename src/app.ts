@@ -1,10 +1,13 @@
 import express from "express";
+import {config} from "dotenv";
 
 const {PORT = 3000} = process.env;
 
 const app = express();
 
-if (!require.main) {
+config();
+
+if (require.main) {
   app
     .get("/", (req, res) => {
       res.send("Hello World!");
