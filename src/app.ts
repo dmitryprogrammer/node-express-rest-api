@@ -1,4 +1,5 @@
 import express from "express";
+import bodyParser from "body-parser";
 import {config} from "dotenv";
 
 const {PORT = 3000} = process.env;
@@ -9,6 +10,7 @@ config();
 
 if (require.main) {
   app
+    .use(bodyParser())
     .get("/", (req, res) => {
       res.send("Hello World!");
     })
