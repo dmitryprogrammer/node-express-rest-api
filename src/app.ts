@@ -12,7 +12,7 @@ if (require.main) {
   app
     .use(bodyParser())
     .get("/", (req, res) => {
-      res.send("Hello World!");
+      res.send("<h1>Hello World!</h1>");
     })
     .listen(PORT)
     .on("listening", () => {
