@@ -2,11 +2,11 @@ import express from "express";
 import bodyParser from "body-parser";
 import {config} from "dotenv";
 
+config();
+
 const {PORT = 3000} = process.env;
 
 const app = express();
-
-config();
 
 if (require.main) {
   app
